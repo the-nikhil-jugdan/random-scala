@@ -56,6 +56,13 @@ end HelloWorld
 @main
 def main(): Unit = println("Hello World")
 
-
 // Dynamic Binding OR Dynamic Method Dispatch
 // Code invoked by the method call depends on the runtime type of the object that contains the method
+
+// Lecture 3.5
+// Functions as objects
+object IntSet:
+  def apply()               = Empty
+  def apply(x: Int)         = Empty.incl(x)
+  def apply(x: Int, y: Int) = Empty.incl(x).incl(y)
+end IntSet
